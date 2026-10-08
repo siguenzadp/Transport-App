@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGZ Transport App</title>
+</head>
+<body>
+    <header>
+        <h1>SGZ Transportation</h1>
+        <p><em>We carry your trust.</em></p>
+        <nav> 
+            <a href="#book">Book a Ride</a> | 
+            <a href="#fleet">Our Vehicles</a> | 
+            <a href="#map">Map</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#schedule">Schedule</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="book">
+            <h2>Book a Ride</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Trip Details</legend>
+
+                    <p>
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Juan Dela Cruz" required>
+                    </p>
+
+                    <p>
+                        <label for="tel-no">Phone Number</label>
+                        <input type="tel" id="tel-no" name="tel-no" placeholder="+639xxxxxxxxx" required>
+                    </p>
+
+                    <p>
+                        <label for="email-add">Full Name</label>
+                        <input type="email" id="email-add" name="email-add" placeholder="juandelacruz@gmail.com" required>
+                    </p>
+
+                    <p>
+                        <label for="pickup">Pick-up Location:</label>
+                        <input type="text" id="pickup" name="pickup" list="places" required>
+                    </p>
+              
+                    <p>
+                        <label for="dropoff">Drop-off Location:</label>
+                        <input type="text" id="dropoff" name="dropoff" list="places" required>
+                    </p>
+              
+                    <p>
+                        <label for="travel-date">Date:</label>
+                        <input type="date" id="travel-date" name="travel-date" required>
+                    </p>
+              
+                    <p>
+                        <label for="travel-time">Time:</label>
+                        <input type="time" id="travel-time" name="travel-time" required>
+                    </p>
+
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1" required>
+                    </p>
+
+                    <p>
+                        <label for="vehicle-type">Vehicle Type:</label>
+                        <select id="vehicle-type" name="vehicle-type" required>
+                          <option value="" disabled selected>-- Select a Vehicle --</option>
+                          <option value="taxi">Taxi</option>
+                          <option value="van">Van</option>
+                          <option value="shuttle-bus">Shuttle Bus</option>
+                          <option value="motorcycle-taxi">Motorcycle Taxi</option>
+                          <option value="tricycle">Tricycle</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label>Payment Method:</label><br>
+                        <input type="radio" id="pay-cash" name="payment-method" value="cash" checked>
+                        <label for="pay-cash">Cash</label>
+                        
+                        <input type="radio" id="pay-card" name="payment-method" value="card">
+                        <label for="pay-card">Card</label>
+                        
+                        <input type="radio" id="pay-ewallet" name="payment-method" value="ewallet">
+                        <label for="pay-ewallet">E-Wallet</label>
+                    </p>
+
+                    <p>
+                        <label>Extras:</label><br>
+                        <input type="checkbox" id="extra-luggage" name="extras" value="luggage">
+                        <label for="extra-luggage">Extra luggage</label>
+                        
+                        <input type="checkbox" id="child-seat" name="extras" value="child-seat">
+                        <label for="child-seat">Child seat</label>
+                        
+                        <input type="checkbox" id="wheelchair" name="extras" value="wheelchair">
+                        <label for="wheelchair">Wheelchair accessible</label>
+                    </p>
+
+                    <p>
+                        <label for="driver-notes">Notes for the driver:</label><br>
+                        <textarea id="driver-notes" name="driver-notes" rows="4" cols="40" placeholder="Landmarks"></textarea>
+                    </p>
+              
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#terms-info">Terms & Conditions</a></label>
+                    </p>
+              
+                    <p>
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+              
+                </fieldset>
+            </form>
+          
+        </section>
+
+        <hr>
+
+        <section id="fleet">
+            <h2>Our Vehicles</h2>
+            
+            <figure>
+                <img src="taxi.jpg" alt="White Taxi" width="300" height="200">
+                <figcaption><strong>Taxi</strong> - Perfect for solo travelers or small groups looking for a fast, direct city commute.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="van.jpg" alt="White Van" width="300" height="200">
+                <figcaption><strong>Van</strong> - Great for families or groups traveling together with extra luggage space.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="shuttle-bus.jpg" alt="White Shuttle Bus" width="300" height="200">
+                <figcaption><strong>Shuttle Bus</strong> - Ideal for corporate events, large tour groups, or scheduled community routes.</figcaption>
+            </figure>
+
+            <small>Note: These image placeholders can be replaced with real photos of your fleet vehicles.</small>
+
+        </section>
+
+        <hr>
+
+        <section id="map">
+            <h2>Find Our Stops</h2>
+            <p>Use the interactive map below to locate our main central terminals, passenger pick-up points, and active city routes.</p>
+
+            <iframe title="SGZ Transport Terminal Station Map" width="600" height="400" src="https://www.openstreetmap.org/export/embed?bbox=120.59541106224061%2C16.401104915488798%2C120.60957312583925%2C16.410264814840424&amp;layer=mapnik&amp;marker=16.40568491905877%2C120.60249209403992"></iframe>
+            
+            <p>
+                <a href="https://openstreetmap.org" target="_blank" rel="noopener">View larger map</a>
+            </p>
+
+            <h3>Image Map: Route Overview</h3>
+            <img src="route.jpg" alt="Route map showing stops at Terminal, City Hall, and Airport" width="972px" height="713px" usemap="#routemap">
+
+            <map name="routemap">
+                
+                <area shape="rect" coords="262,88,428,146" href="#schedule" alt="Go to Baguio City Hall Schedule">
+                
+                <area shape="rect" coords="399,244,544,302" href="#schedule" alt="Go to Terminal Schedule">
+                
+                <area shape="rect" coords="447,526,632,585" href="#schedule" alt="Go to Loakan Airport Schedule">
+              </map>
+
+        </section>
+
+        <hr>
+
+        <section id="media">
+            <h2>Media</h2>
+            <h3>How SGZ Works (Video)</h3>
+
+            <video width="480" controls poster="images/video-poster.jpg">
+                <source src="sgz-poster.mp4" type="video/mp4">
+                <source src="sgz-poster.ogg" type="video/ogg">
+                Your browser does not support the video tag. Please upgrade your browser to watch this video.
+            </video>
+
+            <h3>Driver Announcement (Audio)</h3>
+
+            <audio controls>
+                <source src="driver-announce.mp3" type="audio/mpeg">
+                <source src="driver-announce.ogg" type="audio/ogg">
+                Your browser does not support the audio element. Please download the audio file directly.
+            </audio>
+
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-xLBm_GfyHg?si=MqGqPjNm7PyWCo6h" title="SGZ App Introduction and Tutorial Video" allowfullscreen></iframe>
+
+        </section>
+
+        <hr>
+
+        <section id="schedule">
+            <h2>Shuttle Schedule</h2>
+        
+            <table border="1" cellpadding="6" cellspacing="0">
+              <caption>Daily departures from Central Terminal</caption>
+              <thead>
+                <tr>
+                  <th>Route</th>
+                  <th>Departure</th>
+                  <th>Arrival</th>
+                  <th>Fare</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Terminal to City Hall</td>
+                  <td>06:00 AM</td>
+                  <td>06:15 AM</td>
+                  <td>₱20.00</td>
+                </tr>
+                <tr>
+                  <td>Terminal to University Campus</td>
+                  <td>07:30 AM</td>
+                  <td>07:55 AM</td>
+                  <td>₱25.00</td>
+                </tr>
+                <tr>
+                  <td>Terminal to Airport</td>
+                  <td>09:00 AM</td>
+                  <td>09:30 AM</td>
+                  <td>₱50.00</td>
+                </tr>
+                <tr>
+                  <td>Terminal to Public Market</td>
+                  <td>11:15 AM</td>
+                  <td>11:35 AM</td>
+                  <td>₱20.00</td>
+                </tr>
+              </tbody>
+            </table>
+        
+            <h3>Check Your Route</h3>
+            
+            <form action="#" method="get">
+              <p>
+                <label for="route-search">Select Route:</label>
+                <select id="route-search" name="route-search" required>
+                  <option value="" disabled selected>-- Choose a Route --</option>
+                  <option value="city-hall">Terminal to City Hall</option>
+                  <option value="govpack">Terminal to Governor Pack Rd.</option>
+                  <option value="airport">Terminal to Airport</option>
+                  <option value="session-rd">Terminal to Session Rd.</option>
+                </select>
+                <button type="submit">Search</button>
+              </p>
+            </form>
+
+          </section>
+
+          <hr>
+
+          <section id="contact">
+            <h2>Contact &amp; Feedback</h2>
+          
+            <form enctype="multipart/form-data">
+              <fieldset>
+                <legend>Send Feedback</legend>
+          
+                <label for="name">Your name:</label>
+                <input type="text" id="name" name="name" required>
+          
+                <br>
+          
+                <label for="rating">Rate your ride (1-5):</label>
+                <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+          
+                <br>
+          
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic">
+                  <option value="compliment">Compliment</option>
+                  <option value="complaint">Complaint</option>
+                  <option value="lost-item">Lost item</option>
+                  <option value="suggestion">Suggestion</option>
+                </select>
+          
+                <br>
+          
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+          
+                <br>
+          
+                <label for="photo">Attach a photo (optional):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+          
+                <br>
+          
+                <button type="submit">Send Feedback</button>
+              </fieldset>
+            </form>
+          
+            <h3>Reach Us</h3>
+            <address>
+              SGZ Transport<br>
+              66 Session Road, Baguio City, Benguet, Philippines 2600<br>
+              <a href="tel:+639213345768">+639213345768</a><br>
+              <a href="mailto:feedback@sgztranspo.com">feedback@sgztranspo.com</a>
+            </address>
+          </section>
+
+          <hr>
+
+          <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+              <li><a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a></li>
+              <li><a href="https://www.google.com/maps" target="_blank">Google Maps</a></li>
+              <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+              <li><a href="#top">Back to top</a></li>
+            </ul>
+          </section>
+          
+          <section id="terms-info">
+            <h2>Terms &amp; Conditions</h2>
+            <details>
+              <summary>Read the terms</summary>
+              <ol>
+                <li>Users must provide accurate information when submitting feedback.</li>
+                <li>Feedback should be respectful and relevant to the service.</li>
+                <li>Users are responsible for ensuring that uploaded photos do not violate anyone's privacy or rights.</li>
+              </ol>
+            </details>
+          </section>
+          
+
+    </main>
+    
+</body>
+</html>
